@@ -4,7 +4,8 @@
 #include <QMainWindow>
 #include <QTime>
 #include <QTimer>
-#include <stdio.h>
+#include <QAccelerometer>
+#include <QtMath>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -26,6 +27,8 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    QAccelerometer accel;
+
     QTime curTime;//current value of timer
     QTimer *timer;//periodic timer for read data
 };
